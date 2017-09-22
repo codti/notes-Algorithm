@@ -5,16 +5,18 @@ $arr = array(101 , 22 , 435 ,99 , 30 , 90 , 31 , 66);
 //插入排序
 function selection_sort(&$arr)
 {
-    for ($i = 1; $i < count($arr); $i++)
+    for ($i = 0; $i < count($arr); $i++)
     {
-        $temp = $arr[$i];
-        for ($j = $i - 1; $j >= 0 && $arr[$j] > $temp; $j--){
-            $arr[$j + 1] = $arr[$j];
+        $min = $i;
+        for ($j = $i+1 ; $j < count($arr); $j++){
+        	if ($arr[$j] <= $arr[$min]) {
+        		$min = $j;
+        	}
         }
-        $arr[$j + 1] = $temp;
+        list($arr[$i] ,$arr[$min]) = [$arr[$min],$arr[$i]];
     }
 }
 
-insertion_sort($arr);
+selection_sort($arr);
 
 print_r($arr);
