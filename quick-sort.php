@@ -1,6 +1,6 @@
 <?php
 
-$arr = array(8, 4, 90, 9, 1010 , 1 , 655, 55,34, 67, 1, 26, 17);
+$arr = array(8, 4, 90, 9, 990 , 1 , 655, 55,34, 67, 1, 26, 17);
 
 function quick($arr) {
 	
@@ -78,8 +78,8 @@ function partition (&$arr , $left ,$right) {
 	return $storeIndex-1;
 }
 
-quick_sort($arr , 0 , count($arr)-1);
-print_r($arr);
+// quick_sort($arr , 0 , count($arr)-1);
+// print_r($arr);
 
 
 

@@ -15,6 +15,4 @@ function bubble_sort (&$arr)
 }
 
 bubble_sort($arr);
-
-
- print_r($arr);
+print_r($arr);
